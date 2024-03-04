@@ -49,16 +49,16 @@ useEffect(()=>{
      <p className="text-4xl text-white">{error}</p>
      </div>}
      {!loading && !error && (
-     <div className="gridContainer grid md:grid-cols-3 sm:grid-cols-2 xsm:grid-cols-1 gap-16 mt-5 justify-center  ">
+     <div className="gridContainer grid lg:grid-cols-3 sm:grid-cols-2 xsm:grid-cols-1 gap-16 ">
       {
         news && (
           news.map((info)=>
              (
-              <div className="flex justify-center" key={info.url}>
-                <div className=" bg-amber-100 rounded-lg flex flex-col md:w-10/12 sm:w-11/12 xsm:w-10/12 items-center  pb-8">
+              <div className="flex justify-center py-5" key={info.url}>
+                <div className=" card bg-amber-100 rounded-lg flex flex-col md:w-10/12 sm:w-11/12 xsm:w-9/12 items-center  pb-8">
                   <img className="w-full h-48 rounded-t-lg " src={info.urlToImage} alt={info.title} />
                   <p className="mt-2 font-semibold px-3">{info.title}</p>
-                  <div className="mt-1"><a href={info.url} target="_self" className="hover:text-slate-700 ">See more</a></div>
+                  <div className="mt-1 font-medium"><a href={info.url} target="_self" className="hover:text-slate-700 hover:underline ">See more</a></div>
                 </div>
               </div>
             )
@@ -68,6 +68,11 @@ useEffect(()=>{
       }
      </div>
      )}
+     <footer className="flex justify-center bg-black h-12 items-center">
+      <div className="text-white text-xl">
+      &copy;Promise
+      </div>
+     </footer>
     </div>
   )
 }

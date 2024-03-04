@@ -9,3 +9,8 @@
         transform: rotate(360deg);
     }
 }
+.card{
+    box-shadow: -2px 4px 25px -6px rgba(0,0,0,1);
+-webkit-box-shadow: -2px 4px 25px -6px rgba(0,0,0,1);
+-moz-box-shadow: -2px 4px 25px -6px rgba(0,0,0,1);
+}
