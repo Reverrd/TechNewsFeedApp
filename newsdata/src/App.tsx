@@ -49,15 +49,15 @@ useEffect(()=>{
      <p className="text-4xl text-white">{error}</p>
      </div>}
      {!loading && !error && (
-     <div className="grid grid-cols-3  gap-16 mt-5 pl-5 ">
+     <div className="gridContainer grid md:grid-cols-3 sm:grid-cols-2 xsm:grid-cols-1 gap-16 mt-5 justify-center  ">
       {
         news && (
           news.map((info)=>
              (
-              <div key={info.url}>
-                <div className=" bg-amber-100 rounded-lg flex flex-col w-10/12 items-center  pb-8">
+              <div className="flex justify-center" key={info.url}>
+                <div className=" bg-amber-100 rounded-lg flex flex-col md:w-10/12 sm:w-11/12 xsm:w-10/12 items-center  pb-8">
                   <img className="w-full h-48 rounded-t-lg " src={info.urlToImage} alt={info.title} />
-                  <p className="mt-2 font-semibold">{info.title}</p>
+                  <p className="mt-2 font-semibold px-3">{info.title}</p>
                   <div className="mt-1"><a href={info.url} target="_self" className="hover:text-slate-700 ">See more</a></div>
                 </div>
               </div>
